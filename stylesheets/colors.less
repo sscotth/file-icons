@@ -1,82 +1,413 @@
-// Base16 Colors from https://github.com/chriskempson/base16
-
-// Easy config for when user wants to display different icons,
-// but not colorize them.
-@colored-icons: true;
-
-/* @m<x> = .medium-<x>
- * @l<x> = .light-<x> (<x> ligthened 15%)
- * @d<x> = .dark-<x> (<x> darkened 15%)
- */
-
-// Red Colors
-@mr: #AC4142;
-@lr: lighten(@mr, 15%);
-@dr: darken(@mr, 15%);
-
-// Green colors
-@mg: #90A959;
-@lg: lighten(@mg, 15%);
-@dg: darken(@mg, 15%);
-
-// Yellow colors
-@my: #F4BF75;
-@ly: lighten(@my, 15%);
-@dy: darken(@my, 15%);
-
-// Blue colors
-@mb: #6A9FB5;
-@lb: lighten(@mb, 15%);
-@db: darken(@mb, 15%);
-
-// Maroon colors
-@mm: #8F5536;
-@lm: lighten(@mm, 15%);
-@dm: darken(@mm, 15%);
-
-// Purple colors
-@mp: #AA759F;
-@lp: lighten(@mp, 15%);
-@dp: darken(@mp, 15%);
-
-// Orange colors
-@mo: #D28445;
-@lo: lighten(@mo, 15%);
-@do: darken(@mo, 15%);
-
-// Cyan colors
-@mc: #75B5AA;
-@lc: lighten(@mc, 15%);
-@dc: darken(@mc, 15%);
-
-.light-red when (@colored-icons) { color: @lr; }
-.medium-red when (@colored-icons) { color: @mr; }
-.dark-red when (@colored-icons) { color: @dr; }
-
-.light-green when (@colored-icons) { color: @lg; }
-.medium-green when (@colored-icons) { color: @mg; }
-.dark-green when (@colored-icons) { color: @dg; }
-
-.light-yellow when (@colored-icons) { color: @ly; }
-.medium-yellow when (@colored-icons) { color: @my; }
-.dark-yellow when (@colored-icons) { color: @dy; }
-
-.light-blue when (@colored-icons) { color: @lb; }
-.medium-blue when (@colored-icons) { color: @mb; }
-.dark-blue when (@colored-icons) { color: @db; }
-
-.light-maroon when (@colored-icons) { color: @lm; }
-.medium-maroon when (@colored-icons) { color: @mm; }
-.dark-maroon when (@colored-icons) { color: @dm; }
-
-.light-purple when (@colored-icons) { color: @lp; }
-.medium-purple when (@colored-icons) { color: @mp; }
-.dark-purple when (@colored-icons) { color: @dp; }
-
-.light-orange when (@colored-icons) { color: @lo; }
-.medium-orange when (@colored-icons) { color: @mo; }
-.dark-orange when (@colored-icons) { color: @do; }
-
-.light-cyan when (@colored-icons) { color: @lc; }
-.medium-cyan when (@colored-icons) { color: @mc; }
-.dark-cyan when (@colored-icons) { color: @dc; }
+// // Base16 Colors from https://github.com/chriskempson/base16
+//
+// // Easy config for when user wants to display different icons,
+// // but not colorize them.
+// @colored-icons: true;
+//
+// /* @m<x> = .medium-<x>
+//  * @l<x> = .light-<x> (<x> ligthened 15%)
+//  * @d<x> = .dark-<x> (<x> darkened 15%)
+//  */
+//
+// // Red Colors
+// @mr: #AC4142;
+// @lr: lighten(@mr, 15%);
+// @dr: darken(@mr, 15%);
+//
+// // Green colors
+// @mg: #90A959;
+// @lg: lighten(@mg, 15%);
+// @dg: darken(@mg, 15%);
+//
+// // Yellow colors
+// @my: #F4BF75;
+// @ly: lighten(@my, 15%);
+// @dy: darken(@my, 15%);
+//
+// // Blue colors
+// @mb: #6A9FB5;
+// @lb: lighten(@mb, 15%);
+// @db: darken(@mb, 15%);
+//
+// // Maroon colors
+// @mm: #8F5536;
+// @lm: lighten(@mm, 15%);
+// @dm: darken(@mm, 15%);
+//
+// // Purple colors
+// @mp: #AA759F;
+// @lp: lighten(@mp, 15%);
+// @dp: darken(@mp, 15%);
+//
+// // Orange colors
+// @mo: #D28445;
+// @lo: lighten(@mo, 15%);
+// @do: darken(@mo, 15%);
+//
+// // Cyan colors
+// @mc: #75B5AA;
+// @lc: lighten(@mc, 15%);
+// @dc: darken(@mc, 15%);
+//
+// .light-red when (@colored-icons) { color: @lr; }
+// .medium-red when (@colored-icons) { color: @mr; }
+// .dark-red when (@colored-icons) { color: @dr; }
+//
+// .light-green when (@colored-icons) { color: @lg; }
+// .medium-green when (@colored-icons) { color: @mg; }
+// .dark-green when (@colored-icons) { color: @dg; }
+//
+// .light-yellow when (@colored-icons) { color: @ly; }
+// .medium-yellow when (@colored-icons) { color: @my; }
+// .dark-yellow when (@colored-icons) { color: @dy; }
+//
+// .light-blue when (@colored-icons) { color: @lb; }
+// .medium-blue when (@colored-icons) { color: @mb; }
+// .dark-blue when (@colored-icons) { color: @db; }
+//
+// .light-maroon when (@colored-icons) { color: @lm; }
+// .medium-maroon when (@colored-icons) { color: @mm; }
+// .dark-maroon when (@colored-icons) { color: @dm; }
+//
+// .light-purple when (@colored-icons) { color: @lp; }
+// .medium-purple when (@colored-icons) { color: @mp; }
+// .dark-purple when (@colored-icons) { color: @dp; }
+//
+// .light-orange when (@colored-icons) { color: @lo; }
+// .medium-orange when (@colored-icons) { color: @mo; }
+// .dark-orange when (@colored-icons) { color: @do; }
+//
+// .light-cyan when (@colored-icons) { color: @lc; }
+// .medium-cyan when (@colored-icons) { color: @mc; }
+// .dark-cyan when (@colored-icons) { color: @dc; }
+//
+//
+//
+// /////
+//
+//
+//
+//
+// // Octicon icons, from: https://github.com/github/octicons
+//
+// .octicons { font-family: "Octicons Regular"; font-size: medium; text-align: center; }
+//
+// .checklist-icon { .octicons; content: "\f076"; }
+// .code-icon      { .octicons; content: "\f05f"; }
+// .comment-icon   { .octicons; content: "\f02b"; }
+// .dashboard-icon { .octicons; content: "\f07d"; }
+// .database-icon  { .octicons; content: "\f096"; }
+// .gear-icon      { .octicons; content: "\f02f"; }
+// .git-icon       { .octicons; content: "\f00a"; }
+// .package-icon   { .octicons; content: "\f0c4"; }
+// .ruby-icon      { .octicons; content: "\f047"; }
+// .secret-icon    { .octicons; content: "\f08c"; }
+// .terminal-icon  { .octicons; content: "\f0c8"; }
+// .xml-icon       { .octicons; content: "\f010"; }
+// .markdown-icon  { .octicons; content: "\f0c9"; }
+//
+// .elixir-icon  { .octicons; content: '\f010'; }
+// .erlang-icon  { .octicons; content: '\f010'; }
+//
+// .c-icon       { .octicons; content: "\f010"; }
+// .h-icon       { .octicons; content: "\f010"; }
+// .cpp-icon     { .octicons; content: "\f010"; }
+// .objc-icon    { .octicons; content: "\f010"; font-size: medium; }
+//
+// // FontAwesome icons, looks better on small font-size,
+// // from: http://fortawesome.github.io/Font-Awesome/cheatsheet/
+//
+// .fa { font-family: "FontAwesome"; font-size: small; text-align: center; }
+//
+// .coffee-icon  { .fa; content: "\f0f4"; }
+// .css3-icon    { .fa; content: "\f13c"; }
+// .html5-icon   { .fa; content: "\f13b"; }
+// .twitter-icon { .fa; content: "\f099"; }
+// .puppet-icon  { .fa; content: "\f0c3"; }
+//
+// // Mfizz icons, look better on small font-size,
+// // from: http://mfizz.com/oss/font-mfizz
+//
+// .mf { font-family: "FontMfizz"; font-size: small; text-align: center;  }
+//
+// .js-icon      { .mf; content: "\f148"; }
+// .node-icon    { .mf; content: "\f14c"; font-size: medium; }
+// .python-icon  { .mf; content: "\f109"; }
+// // .c-icon       { .mf; content: "\f10e"; }
+// // .cpp-icon     { .mf; content: "\f101"; }
+// // .objc-icon    { .mf; content: "\f105"; font-size: medium; }
+// .csharp-icon  { .mf; content: "\f134"; }
+// .perl-icon    { .mf; content: "\f117"; }
+// .php-icon     { .mf; content: "\f14a"; font-size: medium; }
+// .java-icon    { .mf; content: "\f142"; font-size: medium; }
+// .scala-icon   { .mf; content: "\f115"; font-size: medium; }
+// .haskell-icon { .mf; content: "\f130"; }
+//
+// // Icomoon icons, from http://icomoon.io
+//
+// .icomoon { font-family: "icomoon"; font-size: 18px; text-align: center; top: 3px; }
+//
+// .grunt-icon         { .icomoon; content: "\e611"; }
+// .gulp-icon          { .icomoon; content: "\e610"; }
+// .hbs-mustache-icon  { .icomoon; content: "\e60f"; }
+// .npm-icon           { .icomoon; content: "\e616"; }
+// .sass-icon          { .icomoon; content: "\e603"; }
+//
+// // Dev icons, from http://vorillaz.github.io/devicons/
+//
+// .devicons { font-family: "devicons"; font-size: large; text-align: center; top: 3px; }
+//
+// .bower-icon         { .devicons; content: "\e64d"; }
+//
+// .go-icon            {
+//   .devicons;
+//   content: "\e624";
+//   font-weight: bolder;
+//   top: 4px;
+//   -webkit-background-clip: text;
+//   -webkit-text-stroke-color: transparent;
+//   -webkit-text-stroke-width: 0.85px;
+//   -webkit-transform: scale(1.15, 1.10);
+//   font-size: medium;
+// }
+//
+// // .coffee-icon        { .devicons; content: "\e651"; }
+// .swift-icon         { .devicons; content: "\e655"; font-size: large; }
+// // .npm-icon           { .devicons; content: "\e616"; }
+// // .sass-icon          { .devicons; content: "\e603"; }
+//
+// .docker { font-family: "fontcustom"; font-size: large; text-align: center; top: 3px; }
+// .docker-icon        { .docker; content: "\f100"; }
+//
+//
+//
+// //////
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// ////
+//
+//
+// // Defaults
+// .icon-file-text, .icon-file-directory, .icon-file-media, .icon-book {
+//   &:before { text-align: center; }
+// }
+//
+// // Github icon
+// .icon-file-directory[data-name=".git"]:before { .git-icon; }
+//
+// // Package icon
+// .icon-file-directory[data-name=".bundle"]:before { .package-icon; }
+//
+// // Default icon: image
+// .icon-file-media[data-name$=".png"]:before { .medium-orange; }
+// .icon-file-media[data-name$=".gif"]:before { .medium-yellow; }
+// .icon-file-media[data-name$=".jpg"]:before { .medium-green;  }
+//
+//
+// // Default icon: book
+// .icon-book[data-name="README.md"]:before,
+// .icon-book[data-name="Readme.md"]:before,
+// .icon-book[data-name="readme.md"]:before { .medium-blue; }
+//
+// @{pane-tab-selector}, .icon-file-text {
+//
+//   // Checklist icon
+//   &[data-name$="TODO"]:before { .checklist-icon; .medium-yellow; }
+//
+//   // Code icon
+//   &[data-name$=".xml"]:before { .code-icon; .medium-blue;   }
+//
+//   // JavaScript icon
+//   &[data-name$=".js"]:before  { .js-icon; .medium-yellow; }
+//   &[data-name$=".jsx"]:before { .js-icon; .medium-green; }
+//   &[data-name$=".ts"]:before  { .js-icon; .medium-purple; }
+//
+//   // Coffee icon
+//   &[data-name$=".coffee"]:before    { .coffee-icon; .medium-maroon; }
+//   &[data-name$=".litcoffee"]:before { .coffee-icon; .light-maroon;  }
+//
+//   // CSS3 icon
+//   &[data-name$=".less"]:before { .css3-icon; .dark-blue; }
+//   &[data-name$=".css"]:before  { .css3-icon; .medium-blue; }
+//   &[data-name$=".styl"]:before { .css3-icon; .medium-green; }
+//
+//   // Dashboard icon
+//   &[data-name$=".slim"]:before { .dashboard-icon; .medium-orange; }
+//
+//   // Database icon
+//   &[data-name$=".json"]:before { .database-icon; .medium-yellow; }
+//   &[data-name$=".cson"]:before { .database-icon; .medium-maroon; }
+//   &[data-name$=".yml"]:before,
+//   &[data-name$=".yaml"]:before { .database-icon; .light-red; }
+//
+//   // Elixir icon
+//   &[data-name$=".ex"]:before        { .elixir-icon;   .dark-purple; }
+//   &[data-name$=".exs"]:before       { .elixir-icon; .medium-purple; }
+//   &[data-name$="mix.exs"]:before    { .elixir-icon;  .light-purple; }
+//   &[data-name$="mix.ex"]:before     { .elixir-icon;  .light-purple; }
+//
+//   // Erlang icon
+//   &[data-name$=".erl"]:before        { .erlang-icon;   .medium-red; }
+//   &[data-name$=".beam"]:before       { .erlang-icon;     .dark-red; }
+//
+//   // HTML5 icon
+//   &[data-name$=".erb"]:before  { .html5-icon; .medium-red;    }
+//   &[data-name$=".html"]:before { .html5-icon; .medium-orange; }
+//   &[data-name$=".haml"]:before { .html5-icon; .light-red;     }
+//   &[data-name$=".jade"]:before { .html5-icon; .medium-green;  }
+//   &[data-name$=".jsp"]:before  { .html5-icon; .medium-purple; }
+//   &[data-name$=".ctp"]:before  { .html5-icon; .medium-blue;   }
+//   &[data-name$=".ejs"]:before  { .html5-icon; .medium-green; }
+//
+//   // Mustache icon
+//   &[data-name$=".hbs"]:before,
+//   &[data-name$=".handlebars"]:before,
+//   &[data-name$=".mustache"]:before { .hbs-mustache-icon; .medium-orange; }
+//
+//   // Gear icon
+//   &[data-name$=".gitignore"]:before     { .gear-icon;                 }
+//   &[data-name$=".gitattributes"]:before { .gear-icon;                 }
+//   &[data-name=".gitmodules"]:before     { .gear-icon;                 }
+//   &[data-name=".mailmap"]:before        { .gear-icon;                 }
+//   &[data-name$=".editorconfig"]:before  { .gear-icon; .medium-orange; }
+//   &[data-name$=".jshintrc"]:before      { .gear-icon; .medium-yellow; }
+//   &[data-name$=".jscsrc"]:before        { .gear-icon; .medium-yellow; }
+//   &[data-name$=".module"]:before        { .gear-icon; .medium-blue;   }
+//   &[data-name$=".htaccess"]:before      { .gear-icon; .medium-red;    }
+//
+//   // Npm icon
+//   &[data-name=".npmrc"]:before           { .node-icon; }
+//   &[data-name=".npmignore"]:before       { .node-icon; }
+//   &[data-name="npm-debug.log"]:before    { .node-icon; .medium-red; }
+//
+//   // Bower icon
+//   &[data-name=".bowerrc"]:before     { .bower-icon; }
+//   &[data-name="bower.json"]:before   { .bower-icon; .medium-yellow; }
+//
+//   // Sass icon
+//   &[data-name$=".sass"]:before { .sass-icon; .light-purple; }
+//   &[data-name$=".scss"]:before { .sass-icon; .dark-purple; }
+//
+//   // PHP icon
+//   &[data-name$=".php"]:before  { .php-icon; .dark-blue; }
+//
+//   // Python icon
+//   &[data-name$=".py"]:before { .python-icon; .dark-yellow; }
+//
+//   // Ruby icon
+//   &[data-name$="Gemfile"]:before,
+//   &[data-name$="Gemfile.lock"]:before,
+//   &[data-name$="Rakefile"]:before,
+//   &[data-name$=".gemspec"]:before,
+//   &[data-name=".ruby-gemset"]:before,
+//   &[data-name=".ruby-version"]:before { .ruby-icon; }
+//
+//   &[data-name$=".rb"]:before,
+//   &[data-name$=".opal"]:before   { .ruby-icon; .medium-red; }
+//
+//   &[data-name$="_spec.rb"]:before { .comment-icon; .medium-green; }
+//
+//   &[data-name$=".pp"]:before { .puppet-icon; .medium-purple }
+//
+//   // Perl icon
+//   &[data-name$=".pl"]:before { .perl-icon; .medium-purple; }
+//   &[data-name$=".pm"]:before { .perl-icon; .medium-purple; }
+//
+//   // Java icon
+//   &[data-name$=".java"]:before { .java-icon; .medium-purple; }
+//
+//   // Go
+//   .set-go-bg-color(@c) when (lightness(@c) >= 50%) {
+//     background-color: lighten(@mc, 55%);
+//   }
+//   .set-go-bg-color(@c) when (lightness(@c) <  50%) {
+//     background-color:  darken(@mc, 55%);
+//   }
+//   &[data-name$=".go"]:before {
+//     .go-icon;
+//     .set-go-bg-color(@tree-view-background-color);
+//     color: @mb;
+//   }
+//   .selected > &[data-name$=".go"]:before {
+//     -webkit-text-stroke-width: 0px !important;
+//   }
+//
+//   // Scala
+//   &[data-name$=".scala"]:before { .scala-icon; .medium-green; }
+//
+//   // Haskell
+//   &[data-name$=".hs"]:before { .haskell-icon; .medium-purple; }
+//
+//   // Objective-C, C++, C
+//   &[data-name$=".c"]:before       { .c-icon; .medium-blue; }
+//   &[data-name$=".h"]:before       { .c-icon; .medium-purple; }
+//   &[data-name$=".cpp"]:before     { .cpp-icon; .medium-blue; }
+//   &[data-name$=".hpp"]:before     { .cpp-icon; .medium-purple; }
+//   &[data-name$=".ipp"]:before     { .cpp-icon; .medium-orange; }
+//   &[data-name$=".m"]:before       { .objc-icon; .medium-blue; }
+//   &[data-name$=".mm"]:before      { .objc-icon; .medium-blue; }
+//   &[data-name$=".swift"]:before   { .swift-icon; .medium-green; }
+//
+//   &[data-name$=".cs"]:before   { .csharp-icon; .medium-blue; }
+//   &[data-name$=".vb"]:before   { .code-icon; .medium-blue;   }
+//
+//   // Secret icon
+//   &[data-name$=".secret"]:before { .secret-icon; }
+//
+//   // Markdown (except readme.md)
+//   &[data-name$=".md"]:before  { .markdown-icon; .medium-blue;   }
+//
+//   // txt
+//   &[data-name$=".txt"]:before { .medium-cyan;   }
+//
+//   // shell
+//   &[data-name$=".sh"]:before,
+//   &[data-name$=".bash"]:before,
+//   &[data-name=".bashrc"]:before { .terminal-icon; .medium-purple; }
+//   &[data-name$=".zsh"]:before,
+//   &[data-name=".zshrc"]:before { .terminal-icon; .medium-blue; }
+//   &[data-name$=".fish"]:before,
+//   &[data-name=".fishrc"]:before  { .terminal-icon; .medium-green; }
+//
+//   // Grunt icon
+//   &[data-name="GRUNTFILE.js"]:before,
+//   &[data-name="Gruntfile.js"]:before,
+//   &[data-name="gruntfile.js"]:before { .grunt-icon; .medium-yellow; }
+//   &[data-name="GRUNTFILE.coffee"]:before,
+//   &[data-name="Gruntfile.coffee"]:before,
+//   &[data-name="gruntfile.coffee"]:before { .grunt-icon; .medium-maroon; }
+//
+//   // Gulp icon
+//   &[data-name="GULPFILE.js"]:before,
+//   &[data-name="Gulpfile.js"]:before,
+//   &[data-name="gulpfile.js"]:before  { .gulp-icon; .medium-red; }
+//   &[data-name="GULPFILE.coffee"]:before,
+//   &[data-name="Gulpfile.coffee"]:before,
+//   &[data-name="gulpfile.coffee"]:before { .gulp-icon; .medium-maroon; }
+//
+//   // Dockerfile icon
+//   &[data-name="Dockerfile"]:before { .docker-icon; .dark-blue; }
+// }
+//
+//
+// ///
+//
+//
+//
+// // pane tab
+// @pane-tab-selector: ~'.pane ul.tab-bar li.tab .title';
+//
+// @{pane-tab-selector}:before {
+//   margin-right: 5px;
+//   vertical-align: middle;
+// }
+//
+//
+// //////
